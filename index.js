@@ -21,12 +21,12 @@ app.use((err, req, res, next) => {
 app.use('/api',require('./routes/near_routes'))
 console.log(12345,'in')
 
-DbConfg().then(()=>{
-    app.listen(3000, () => console.log("Server ready on port 3000."));
-})
-.catch((error) => {
-    console.log("Invalid database connection...!", error);
-});
-
+// DbConfg().then(()=>{
+//     
+// })
+// .catch((error) => {
+//     console.log("Invalid database connection...!", error);
+// });
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
 module.exports = app;
